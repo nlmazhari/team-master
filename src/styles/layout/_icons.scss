@@ -1,0 +1,22 @@
+.icon-sm {
+    @extend .img-cover;
+}
+.icon-sm {
+    width: 16px;
+    height: 16px;
+}
+.text-icon {
+    @extend .icon-sm;
+    margin-left: 8px;
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.avatar-sm {
+    @extend .avatar;
+    width: 24px;
+    height: 24px;
+}

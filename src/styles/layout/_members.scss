@@ -1,0 +1,12 @@
+.membersList {
+    width: 100%;
+    // hiding more than 5 items
+    .box__info:nth-child(n+6) {
+        display:none;
+    }
+}
+.showAll {
+    .box__info:nth-child(n+6) {
+        display:flex;
+    }
+}

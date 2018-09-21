@@ -1,0 +1,130 @@
+.box {
+    background: $white;
+    border: 1px solid #eceded;
+    border-top: 1px solid $green;
+    width: 312px;
+    padding: 1em 1em 45px 1em;
+    position: relative;
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        color: $dark_gray;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 1em;
+        position: relative;
+    }
+    &__add {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        transform-style: flat;
+        transition: all 250ms ease-out;
+        position: relative;
+        padding: 10px 0 10px 10px;
+        .green-title {
+            color: $green;
+            // I rather using the first approach, but the bold font doesn't seem to work
+            // using bold fonts instead of using font weight avoids the blurness around the fonts and improves quality
+            // font-family: $bold;
+            font-weight: bold; 
+            max-height: 40px;
+            span {
+                // I rather using the first approach, but the bold font doesn't seem to work
+                // using bold fonts instead of using font weight avoids the blurness around the fonts and improves quality
+                // font-family: $bold;
+                font-weight: bold; 
+            }
+        }
+        &:hover {
+            background: $light_green;
+            transform-style: flat;
+            transition: all 250ms ease-out;
+            .add-btn {
+                background: $white;
+            }  
+        }
+    }
+    &__info {
+        @extend .box__add;
+        p {
+            color: #364e4a;
+        }
+        .member {
+            color: $dark_green;
+            text-transform: capitalize;
+            // I rather using the first approach, but the bold font doesn't seem to work
+            // using bold fonts instead of using font weight avoids the blurness around the fonts and improves quality
+            // font-family: $bold;
+            font-weight: bold;            
+            letter-spacing: 0.5px;
+        }
+        .remove-btn {
+            display: none;
+        }
+        &:hover {
+            .avatar {
+                display: none;
+            }
+            .remove-btn {
+                display: block;
+            }
+        }
+    }
+    .select-wrap {
+        @include position-scale(absolute,0,0,0,auto);
+        width: 100%;
+        display: none;
+    }
+    .title-wrap {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        &:hover {
+            background-color: $light_green;
+        }
+    }
+    .team-btn {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1299px) {
+    .box{
+        width: 592px;
+        &__add {
+            display: inline-flex;
+            width: 50%;
+            padding: 16px 0px 16px 10px;
+        }
+        &__info {
+            padding: 16px 10px;
+        }
+        .team-btn {
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width:1900px) {
+    .box{
+        width: 592px;
+        &__add {
+            display: inline-flex;
+            width: 50%;
+            padding: 16px 0px 16px 10px;
+        }
+        &__info {
+            padding: 16px 10px;
+        }
+        .team-btn {
+            display: block;
+        }
+    }
+}

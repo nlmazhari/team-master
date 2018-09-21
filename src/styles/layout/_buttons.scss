@@ -1,0 +1,73 @@
+//general button styling
+.btn {
+    border: none;
+    box-shadow: none;
+    text-transform: capitalize;
+    transform-style: flat;
+    transition: all 500ms ease-out;
+    &:active,
+    &:focus,
+    &:hover,
+    &.btn-default:active,
+    &.btn-default:active:focus,
+    &.btn-default:active:hover {
+        box-shadow: none;
+        border: none;
+        transform-style: flat;
+        transition: all 250ms ease-out;
+    }
+}
+.add-btn {
+    background: $light_green;
+    color: #0e7e79;
+    border-radius: 100%;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+.remove-btn {
+    @extend .add-btn;
+    background: $white;
+    color: $orange;
+    border: 1px solid $orange;
+    &:active,
+    &:focus,
+    &:hover,
+    &.btn-default:active,
+    &.btn-default:active:focus,
+    &.btn-default:active:hover {
+        border: 1px solid $orange;
+    }
+}
+.show-btn {
+    background: $light_green;
+    border-radius: 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 10px;
+    @include position-scale(absolute,auto,0,0,0);
+    &:active,
+    &:focus,
+    &:hover,
+    &.btn-default:active,
+    &.btn-default:active:focus,
+    &.btn-default:active:hover {
+        background: $light_green;        
+    }
+}
+.team-btn {
+    text-transform: uppercase;
+    padding: 0;
+    font-size: 10px;
+    color: $dark_gray;
+    background-color: transparent;
+    &:active,
+    &:focus,
+    &:hover,
+    &.btn-default:active,
+    &.btn-default:active:focus,
+    &.btn-default:active:hover {
+        color: $dark_gray;  
+        background-color: transparent;
+    }
+}

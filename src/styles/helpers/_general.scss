@@ -1,0 +1,25 @@
+.container {
+    max-width: 1300px;
+    width: 100%;
+    padding: 20px;
+    @include viewport(small) {
+        padding: 40px;  
+    }
+}
+
+.img-cover {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.capital {
+    text-transform: capitalize;
+}
+
+.star {
+    color: $orange;
+    font-size: 16px;
+    top: -.24em;
+}
